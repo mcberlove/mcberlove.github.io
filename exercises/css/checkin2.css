@@ -1,0 +1,38 @@
+main{
+    margin: 1rem;
+}
+body{
+    text-align: justify;
+    background-color: #e7efe4;
+    font-family: serif, Georgia, Times, 'Times New Roman';
+}
+h1, h2, h3{
+    color: #317873;
+    font-family: "sans serif", "Barlow" "Cormorant Garamond";
+}
+h1{
+    font-size: 40px;
+}
+hr{
+    border: 2px solid #317873;
+}
+p{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    line-height: 1.2rem;
+}
+figure{
+    float: right;
+    max-width: 100%;
+}
+
+a:link{
+color:rgb(19, 19, 84);
+text-decoration: none;
+}
+a:hover{
+color: #78315e;
+}
+a:visited{
+color: #d2d735;
+}
