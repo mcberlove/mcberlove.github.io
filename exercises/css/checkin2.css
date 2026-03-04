@@ -2,7 +2,7 @@ main{
     margin: 1rem;
 }
 body{
-    text-align: justify;
+    text-align: left;
     background-color: #e7efe4;
     font-family: serif, Georgia, Times, 'Times New Roman';
 }
