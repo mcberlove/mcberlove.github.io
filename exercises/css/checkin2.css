@@ -8,7 +8,8 @@ body{
 }
 h1, h2, h3{
     color: #317873;
-    font-family: "sans serif", "Barlow" "Cormorant Garamond";
+    font-family: "sans serif", "Cormorant Garamond", "Barlow";
+}
 }
 h1{
     font-size: 40px;
