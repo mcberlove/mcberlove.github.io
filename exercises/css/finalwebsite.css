@@ -6,38 +6,63 @@ body{
     flex-direction: column;
     min-height: 100vh;
 }
-
 #wrapper{
     display: grid;
     grid-template-rows: repeat(3, minmax(0, 1fr));
     grid-template-columns: 1fr;
     min-height: 100vh;
 }
-h1{
+h1, h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Helvetica, sans-serif;
     text-align: center;
 }
 p{
     line-height: 150%;
 }
 
-/* NAV BAR */
+/* HEADER & NAV BAR */
+#header{
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
 #logo{
-    background-color: rgb(139, 155, 139);
+    background-color: #2F3E4D;
     border-radius: 50%;
+    display: grid;
     align-items: center;
     text-align: center;
     width: 4rem;
     height: 4rem;
+}
+#logo:hover{
+    background-color: #FFE0E8;
 }
 
 nav{
     grid-row: 1/2;
     grid-column: 1/2;
 }
+#heading{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    text-align: center;
+}
+#heading > p{
+    font-size: 1.3rem;
+}
+hr{
+    border: 2px solid #576A7F;
+    width: 20rem;
+}
 nav ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding: 25px;
     margin: 0rem;
     border: 2px solid aliceblue;
@@ -48,19 +73,19 @@ nav li{
     list-style-type: none;
     margin: 25px;
 }
-nav a{
+a{
     text-decoration: none;
     color: white;
 }
-nav a:hover{
+a:hover{
     color: black;
 }
 
-/* SAMPLE HOMEPAGE */
+/* HOMEPAGE */
 #home-main{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 2fr;
+    grid-template-columns: 2fr 2fr 2fr;
 
     grid-row: 2/3;
     grid-column: 1/2;
@@ -69,8 +94,17 @@ nav a:hover{
     grid-row: 1/2;
     grid-column: 1/2;
     background-color: rgb(181, 202, 209);
-    border: 2px solid aliceblue;
-    padding: 1rem;
+    padding: 0.5rem;
+    border-radius: 3rem;
+    background-clip: content-box;
+    border: 4px dashed aliceblue;
+    filter: drop-shadow(.3rem .3rem .2rem #c7c7c7)
+}
+img{
+    border-radius: 2rem;
+    max-width: 100%;
+    display: block;
+    margin: auto;
 }
 #introsentence{
     grid-row: 1/2;
@@ -79,9 +113,21 @@ nav a:hover{
     border: 2px solid aliceblue;
     margin: 2rem;
     padding: 1rem;
+    max-height: fit-content;
+    font-size: 120%;
+}
+#abtme{
+    grid-row: 1/2;
+    grid-column: 3/4;
+    background-color: rgb(181, 202, 209);
+    border: 2px solid aliceblue;
+    margin: 2rem;
+    padding: 1rem;
+    max-height: fit-content;
+    font-size: 120%;
 }
 footer{
-    grid-row: 4/5;
+    grid-row: 3/4;
     grid-column: 1/2;
     background-color: #576A7F;
     color: white;
@@ -109,4 +155,114 @@ footer{
     grid-row: auto;
     grid-column: auto;
 }
+   /* #profwritingmain{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    }
+    #profwritingmain > * {
+    grid-row: auto;
+    grid-column: auto;
+    } */
 }
+
+/* PROFESSIONAL WRITING PAGE */  
+#profwritingmain{
+    display: grid;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+#pr1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+
+#pr2{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+#grant-proposal{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+#grant-words{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+#grant-photo{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.press-release{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: lightblue;
+    filter: drop-shadow(.3rem .3rem .2rem #c7c7c7)
+}
+.press-release a{
+    color: black;
+}
+.press-release a:hover{
+    color: darkgreen;
+}
+
+/* CONTACT ME PAGE */
+#contact-main{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+#top-row{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+#flower-arch{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: lightblue;
+}
+#gettowork{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: lightblue;
+    max-height: fit-content;
+}
+#connectlinks{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: lightblue;
+    max-height: fit-content;
+}
+
+/*RESUME*/
+#resume-main{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    padding: 2rem;
+}
+h3{
+    color: #576A7F;
+}
+
+
+
