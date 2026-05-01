@@ -23,28 +23,54 @@ p{
 /* HEADER & NAV BAR */
 #logo{
     background-color: #2F3E4D;
+    padding: 0.2rem;
     border-radius: 50%;
     display: grid;
     align-items: center;
     text-align: center;
     width: 4rem;
     height: 4rem;
+    margin-left: 2rem;
 }
-#logo:hover{
-    background-color: aliceblue;
-}
-
 nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid aliceblue;
+    background-color: #576A7F;
+
     grid-row: 1/2;
     grid-column: 1/2;
 }
+/*.hero{
+    position: relative;
+}
+/*.hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+} */
+ .heading img{
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+ }
 .heading{
     grid-row: 2/3;
     grid-column: 1/2;
     text-align: center;
     margin: 0;
 }
-.heading > p{
+.heading img{
+    border-radius: 0;
+}
+.hero-text, .heading > p{
     font-size: 1.3rem;
     text-align: center;
 }
@@ -59,24 +85,22 @@ nav ul{
     align-items: center;
     padding: 25px;
     margin: 0rem;
-    border: 2px solid aliceblue;
-    background-color: #576A7F; 
     color: black;
 }
-nav li{
-    list-style-type: none;
-    margin: 25px;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
-header a:hover{
+nav ul a:hover{
     color: black;
     background-color: aliceblue;
     border: dashed green 2px;
     border-radius: 1rem;
     padding: 1rem;
+}
+nav li{
+    list-style-type: none;
+    margin: 25px;
+}
+header a{
+    text-decoration: none;
+    color: white;
 }
 
 /* HOMEPAGE */
@@ -99,7 +123,8 @@ main{
     border-radius: 3rem;
     background-clip: content-box;
     border: 4px dashed aliceblue;
-    filter: drop-shadow(.3rem .3rem .2rem #c7c7c7)
+    filter: drop-shadow(.3rem .3rem .2rem #c7c7c7);
+    max-height: fit-content;
 }
 img{
     border-radius: 2rem;
@@ -139,38 +164,16 @@ footer{
     margin-top: auto;
     padding: 1rem;
 }
-
-/*RESPONSIVE DESIGN*/
-@media (max-width:800px) {
-    #wrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    #wrapper > * {
-    grid-row: auto;
-    grid-column: auto;
+footer a{
+    color: white;
+    text-decoration: none;
 }
-    #home-main{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+footer a:hover{
+    color: black;
 }
 
-    #home-main > * {
-    grid-row: auto;
-    grid-column: auto;
-}
-   /* #profwritingmain{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    }
-    #profwritingmain > * {
-    grid-row: auto;
-    grid-column: auto;
-    } */
-}
-
-/* PROFESSIONAL WRITING PAGE */  
-#profwritingmain{
+/* PORTFOLIO PAGE */  
+#portfolio-main{
     display: grid;
     grid-template-rows: auto 2fr auto;
     grid-template-columns: 1fr;
@@ -182,12 +185,10 @@ footer{
     grid-row: 1/2;
     grid-column: 1/2;
 }
-
 #pr2{
     grid-row: 2/3;
     grid-column: 1/2;
 }
-
 #grant-proposal{
     display: grid;
     grid-template-rows: 1fr;
@@ -197,24 +198,29 @@ footer{
     grid-column: 1/2;
 }
 #grant-words{
+    background-color: lightblue;
     grid-row: 1/2;
     grid-column: 1/2;
 }
 #grant-photo{
+    margin: 1rem;
+    padding: 1rem;
     grid-row: 1/2;
     grid-column: 2/3;
+    align-items: center;
 }
 .press-release{
     margin: 1rem;
-    padding: 1rem;
+    padding:1.5rem;
     background-color: lightblue;
     filter: drop-shadow(.3rem .3rem .2rem #c7c7c7);
     max-height: fit-content;
+    border-radius: 3rem;
 }
-.press-release a{
+#portfolio-main a{
     color: black;
 }
-.press-release a:hover{
+#portfolio-main a:hover{
     color: darkgreen;
 }
 
@@ -233,6 +239,10 @@ footer{
     margin: 2rem;
     padding: 1rem;
     background-color: lightblue;
+    border: 4px dashed aliceblue;
+}
+#flower-arch img{
+    height: auto;
 }
 #content{
     display: grid;
@@ -258,6 +268,13 @@ footer{
     background-color: lightblue;
     max-height: fit-content;
 }
+#connectlinks a{
+    color: black;
+    text-decoration: none;
+}
+#connectlinks a:hover{
+    color: white;
+}
 
 /*RESUME*/
 #resume-main{
@@ -265,10 +282,57 @@ footer{
     grid-column: 1/2;
     padding: 2rem;
 }
-h3{
-    color: #576A7F;
+.resume{
+    background-color: rgb(181, 202, 209);
+    border: 2px solid aliceblue;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+.resume h2{
+    color: #2F3E4D;
 }
 
+/*RESPONSIVE DESIGN*/
+@media (max-width:800px) {
+    #wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    #wrapper > * {
+        grid-row: auto;
+        grid-column: auto;
+}
+    #home-main{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+}
+
+    #home-main > * {
+        grid-row: auto;
+        grid-column: auto;
+}
+
+    #content, #contact-main, #grant-proposal{
+        display: flex;
+        flex-direction: column;
+    }
+    #connectlinks{
+        order: 1;
+    }
+    #gettowork{
+        order: 2;
+    }
+    #flower-arch{
+        order: 3;
+    } 
+    #grant-words{
+        order: 1;
+    }
+    #grant-photo{
+        order: 2;
+    }
+}
 
 
 
