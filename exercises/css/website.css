@@ -93,7 +93,7 @@ hr{
 .portfolio-box a{
     color: black;
 }
-.portfolio-box a:active{
+.portfolio-box a:hover{
     color: white;
 }
 
