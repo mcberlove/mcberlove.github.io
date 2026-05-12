@@ -25,7 +25,6 @@ nav{
     align-items: center;
     justify-content: center;
     padding: 3rem;
-    width: 100%;
 }
 nav a{
     padding: 1rem;
@@ -166,3 +165,9 @@ footer a:active{
         order: 3;
     }
 }
+@media(prefers-reduced-motion: reduce) {
+    nav a, .contact-link:hover{
+        animation: none;
+    }
+}
+
