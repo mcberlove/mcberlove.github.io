@@ -130,6 +130,7 @@ hr{
 .contact-link img{
     height: 90px;
     width: 90px;
+    border-radius: 50%;
 }
 .contact-link a{
     color: white;
