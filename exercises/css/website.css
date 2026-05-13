@@ -123,6 +123,8 @@ hr{
     max-height: fit-content;
     align-items: center;
     transition: all 0.2s ease;
+    margin-left: 7rem;
+    margin-right: 7rem;
 }
 .contact-link:hover {
     transform:translateY(+5px);
