@@ -115,7 +115,7 @@ hr{
     flex-direction: column;
     background-color: lightblue;
     color: black;
-    margin: 2rem;
+    margin: 2rem 7rem 2rem 7rem;
     padding: 1rem;
     border-radius: 2rem;
     border: 2rem;
@@ -123,8 +123,6 @@ hr{
     max-height: fit-content;
     align-items: center;
     transition: all 0.2s ease;
-    margin-left: 7rem;
-    margin-right: 7rem;
 }
 .contact-link:hover {
     transform:translateY(+5px);
