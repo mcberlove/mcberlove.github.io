@@ -28,18 +28,21 @@ nav{
 }
 nav a{
     padding: 1rem;
+    margin: 1rem;
     text-decoration: none;
     color: white;
     font-size: 1.3rem;
-    transition: all 0.02s ease;
-}
-nav a:hover{
-    transform: translateZ(5px);
-    margin: 1rem;
     border: 2px dashed green;
     color: black;
     background-color: aliceblue;
     border-radius: 1rem;
+}
+nav a:hover{
+    margin: 1rem;
+    border: 2px dashed green;
+    color: black;
+    background-color: palegoldenrod;
+    border-radius: 1rem; 
 }
 hr{
     border: 2px solid #576A7F;
@@ -51,7 +54,7 @@ hr{
     object-fit: cover;
 }
 .logo{
-    background-color: #2F3E4D;
+    background-color: aliceblue;
     border-radius: 50%;
 }
 
@@ -86,8 +89,8 @@ hr{
 /*PORTFOLIO*/
 .portfolio-box{
     background-color: lightblue;
-    margin: 2rem;
-    padding: 1rem;
+    margin: 2rem 7rem 2rem 7rem;
+    padding: 1.5rem;
     border-radius: 2rem;
 }
 .portfolio-box a{
